@@ -17,7 +17,8 @@ const Login = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    navigate();
+    
+    navigate("/");
   }
 
   const handleChange = (event) => {
@@ -30,25 +31,29 @@ const Login = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>Username:
-        <input
-          type="text"
-          name="username"
-          value={user.username}
-          onChange={handleChange}
-        />
-      </label>
-      <label>Password:
-        <input
-          type="password"
-          name="password"
-          value={user.password}
-          onChange={handleChange}
-        />
-      </label>
-      <input type="submit" />
-    </form>
+      <form onSubmit={handleSubmit}>
+        <label>Username:
+          <input
+            type="text"
+            name="username"
+            placeholder="Username..."
+            value={user.username}
+            onChange={handleChange}
+          />
+        </label>
+        <br></br>
+        <label>Password:
+          <input
+            type="password"
+            name="password"
+            placeholder="Password..."
+            value={user.password}
+            onChange={handleChange}
+          />
+        </label>
+        <br></br>
+        <input type="submit" />
+      </form>
   )
 }
 
